@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Calculadora de Promedio de Notas | Herramientas Útiles</title>
@@ -123,6 +122,7 @@ text-decoration:none;
 
 <p>
 Escribe tus notas separadas por comas.
+Puedes colocar 2, 3, 4, 5 o las notas que necesites.
 </p>
 
 <input
@@ -148,4 +148,102 @@ Para calcular un promedio se suman todas las notas y después se divide el resul
 </p>
 
 <p>
-<strong>Promedio = suma de las notas ÷ cantidad de notas</strong
+<strong>Promedio = suma de las notas ÷ cantidad de notas</strong>
+</p>
+
+<p>
+Por ejemplo:
+</p>
+
+<p>
+8 + 9 + 7 + 10 = 34
+</p>
+
+<p>
+34 ÷ 4 = <strong>8,5</strong>
+</p>
+
+<p>
+Por lo tanto, el promedio es <strong>8,5</strong>.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>💡 Ejemplos</h2>
+
+<p>
+<strong>3 notas:</strong> 8, 9, 10 → promedio 9
+</p>
+
+<p>
+<strong>4 notas:</strong> 8, 9, 7, 10 → promedio 8,50
+</p>
+
+<p>
+<strong>5 notas:</strong> 7, 8, 9, 10, 8 → promedio 8,40
+</p>
+
+</div>
+
+<a class="volver" href="index.html">
+← Volver a Herramientas Útiles
+</a>
+
+</div>
+
+<script>
+
+function calcularPromedio(){
+
+let texto=document.getElementById("notas").value.trim();
+
+let valores=texto.split(",");
+
+let notas=[];
+
+for(let i=0;i<valores.length;i++){
+
+let nota=parseFloat(valores[i].trim());
+
+if(!isNaN(nota)){
+notas.push(nota);
+}
+
+}
+
+let resultado=document.getElementById("resultado");
+
+if(notas.length===0){
+
+resultado.style.display="block";
+
+resultado.innerHTML="⚠️ Escribe al menos una nota válida.";
+
+return;
+
+}
+
+let suma=0;
+
+for(let i=0;i<notas.length;i++){
+
+suma=suma+notas[i];
+
+}
+
+let promedio=suma/notas.length;
+
+resultado.style.display="block";
+
+resultado.innerHTML=
+"✅ Tu promedio es: "+promedio.toFixed(2);
+
+}
+
+</script>
+
+</body>
+
+</html>
