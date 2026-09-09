@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contacto - Herramientas Útiles</title>
+
+<meta name="description" content="Página de contacto de Herramientas Útiles.">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#f4f6f8;
+color:#17202a;
+line-height:1.6;
+}
+
+header{
+background:linear-gradient(135deg,#111827,#2563eb);
+color:white;
+text-align:center;
+padding:35px 15px;
+}
+
+header h1{
+margin-bottom:8px;
+}
+
+.container{
+max-width:700px;
+margin:30px auto;
+padding:0 15px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+h2{
+margin-bottom:15px;
+}
+
+p{
+margin-bottom:18px;
+color:#555;
+}
+
+label{
+display:block;
+font-weight:bold;
+margin-top:15px;
+margin-bottom:6px;
+}
+
+input,textarea{
+width:100%;
+padding:13px;
+border:1px solid #d0d5dd;
+border-radius:10px;
+font-size:16px;
+font-family:Arial,sans-serif;
+}
+
+textarea{
+min-height:140px;
+resize:vertical;
+}
+
+button{
+margin-top:18px;
+background:#2563eb;
+color:white;
+border:0;
+padding:13px 20px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+.volver{
+display:inline-block;
+margin-top:20px;
+color:#2563eb;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:30px 15px;
+color:#667085;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>📩 Contacto</h1>
+
+<p>Herramientas Útiles</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>¿Tienes alguna pregunta?</h2>
+
+<p>
+Puedes utilizar este formulario para escribirnos.
+</p>
+
+<form onsubmit="enviarFormulario(event)">
+
+<label>Nombre</label>
+
+<input
+type="text"
+id="nombre"
+placeholder="Escribe tu nombre"
+required
+>
+
+<label>Correo electrónico</label>
+
+<input
+type="email"
+id="correo"
+placeholder="tu@email.com"
+required
+>
+
+<label>Mensaje</label>
+
+<textarea
+id="mensaje"
+placeholder="Escribe tu mensaje..."
+required
+></textarea>
+
+<button type="submit">
+Enviar mensaje
+</button>
+
+</form>
+
+<a class="volver" href="index.html">
+← Volver a Herramientas Útiles
+</a>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 Herramientas Útiles
+
+</footer>
+
+<script>
+
+function enviarFormulario(event){
+
+event.preventDefault();
+
+let nombre=document.getElementById("nombre").value;
+
+let correo=document.getElementById("correo").value;
+
+let mensaje=document.getElementById("mensaje").value;
+
+let asunto="Contacto desde Herramientas Útiles";
+
+let cuerpo=
+"Nombre: "+nombre+
+"%0AEmail: "+correo+
+"%0A%0AMensaje:%0A"+mensaje;
+
+window.location.href=
+"mailto:?subject="+
+encodeURIComponent(asunto)+
+"&body="+cuerpo;
+
+}
+
+</script>
+
+</body>
+</html>
