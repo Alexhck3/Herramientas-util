@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Conversor de Temperatura | Herramientas Útiles</title>
+
+<meta name="description" content="Conversor de temperatura gratis. Convierte Celsius, Fahrenheit y Kelvin fácilmente.">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#f4f6f8;
+color:#17202a;
+line-height:1.6;
+}
+
+header{
+background:linear-gradient(135deg,#111827,#2563eb);
+color:white;
+text-align:center;
+padding:35px 15px;
+}
+
+header h1{
+margin-bottom:8px;
+}
+
+.container{
+max-width:750px;
+margin:30px auto;
+padding:0 15px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+margin-bottom:25px;
+}
+
+h2{
+margin-bottom:15px;
+}
+
+p{
+margin-bottom:15px;
+color:#555;
+}
+
+label{
+display:block;
+font-weight:bold;
+margin-top:15px;
+margin-bottom:6px;
+}
+
+input,
+select{
+width:100%;
+padding:13px;
+border:1px solid #d0d5dd;
+border-radius:10px;
+font-size:16px;
+}
+
+button{
+margin-top:18px;
+background:#2563eb;
+color:white;
+border:0;
+padding:13px 20px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+.resultado{
+margin-top:20px;
+padding:15px;
+background:#eef4ff;
+border-radius:10px;
+font-size:18px;
+line-height:1.8;
+}
+
+.volver{
+display:inline-block;
+margin-top:10px;
+color:#2563eb;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🌡️ Conversor de Temperatura</h1>
+
+<p>Convierte Celsius, Fahrenheit y Kelvin fácilmente</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>🧮 Convertir temperatura</h2>
+
+<label>Valor</label>
+
+<input
+type="number"
+id="valor"
+placeholder="Ejemplo: 25"
+step="any"
+>
+
+<label>Convertir desde</label>
+
+<select id="desde">
+
+<option value="C">Celsius (°C)</option>
+<option value="F">Fahrenheit (°F)</option>
+<option value="K">Kelvin (K)</option>
+
+</select>
+
+<label>Convertir a</label>
+
+<select id="a">
+
+<option value="C">Celsius (°C)</option>
+<option value="F">Fahrenheit (°F)</option>
+<option value="K">Kelvin (K)</option>
+
+</select>
+
+<button onclick="convertirTemperatura()">
+Convertir
+</button>
+
+<div id="resultado" class="resultado" style="display:none;"></div>
+
+</div>
+
+<div class="card">
+
+<h2>📚 ¿Cómo funciona?</h2>
+
+<p>
+Este conversor permite transformar una temperatura entre Celsius, Fahrenheit y Kelvin.
+</p>
+
+<p>
+Por ejemplo, <strong>0 °C</strong> equivalen a <strong>32 °F</strong>.
+</p>
+
+<p>
+También puedes convertir temperaturas negativas y valores con decimales.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>💡 Ejemplos</h2>
+
+<p>
+<strong>0 °C = 32 °F</strong>
+</p>
+
+<p>
+<strong>100 °C = 212 °F</strong>
+</p>
+
+<p>
+<strong>25 °C = 77 °F</strong>
+</p>
+
+<p>
+<strong>0 °C = 273.15 K</strong>
+</p>
+
+</div>
+
+<a class="volver" href="index.html">
+← Volver a Herramientas Útiles
+</a>
+
+</div>
+
+<script>
+
+function convertirTemperatura(){
+
+let valor=parseFloat(
+document.getElementById("valor").value
+);
+
+let desde=document.getElementById("desde").value;
+
+let a=document.getElementById("a").value;
+
+let resultado=document.getElementById("resultado");
+
+if(isNaN(valor)){
+
+resultado.style.display="block";
+
+resultado.innerHTML="⚠️ Escribe una temperatura.";
+
+return;
+
+}
+
+let celsius;
+
+if(desde==="C"){
+celsius=valor;
+}
+
+else if(desde==="F"){
+celsius=(valor-32)*5/9;
+}
+
+else if(desde==="K"){
+celsius=valor-273.15;
+}
+
+let convertido;
+
+if(a==="C"){
+convertido=celsius;
+}
+
+else if(a==="F"){
+convertido=(celsius*9/5)+32;
+}
+
+else if(a==="K"){
+convertido=celsius+273.15;
+}
+
+resultado.style.display="block";
+
+resultado.innerHTML=
+"🌡️ Resultado: <strong>"+
+convertido.toLocaleString("es-ES",{maximumFractionDigits:10})+
+" °"+a;
+
+}
+
+</script>
+
+</body>
+
+</html>
