@@ -20,7 +20,26 @@ font-family:Arial,sans-serif;
 background:#f4f6f8;
 color:#17202a;
 }
+nav{
+background:#ffffff;
+padding:15px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:100;
+}
 
+nav a{
+color:#111827;
+text-decoration:none;
+font-weight:bold;
+margin:0 12px;
+}
+
+nav a:hover{
+color:#2563eb;
+  }
 header{
 background:linear-gradient(135deg,#111827,#2563eb);
 color:white;
@@ -140,7 +159,13 @@ color:#667085;
 
 <body>
 
-<header>
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#herramientas">Herramientas</a>
+<a href="#guias">Guías</a>
+</nav>
+
+<header id="inicio">
 <h1>🛠️ Herramientas Útiles</h1>
 <p>Herramientas gratuitas para tu día a día</p>
 </header>
@@ -154,6 +179,10 @@ type="text"
 placeholder="🔎 Buscar una herramienta..."
 onkeyup="buscar()"
 >
+
+<h2 id="herramientas" style="margin-bottom:20px;">
+🛠️ Nuestras herramientas
+</h2>
 
 <div class="tools">
 
