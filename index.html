@@ -6,10 +6,9 @@
 
 <title>Herramientas Útiles Gratis</title>
 
-<meta name="description" content="Herramientas online gratuitas para estudiantes y uso diario. Calculadora, promedio, conversor y temporizador.">
+<meta name="description" content="Herramientas online gratuitas: calculadoras, conversores, temporizador y herramientas para estudiantes.">
 
 <style>
-
 *{
 box-sizing:border-box;
 margin:0;
@@ -18,15 +17,15 @@ padding:0;
 
 body{
 font-family:Arial,sans-serif;
-background:#f3f4f6;
-color:#111827;
+background:#f4f6f8;
+color:#17202a;
 }
 
 header{
 background:linear-gradient(135deg,#111827,#2563eb);
 color:white;
 text-align:center;
-padding:40px 15px;
+padding:38px 15px;
 }
 
 header h1{
@@ -36,11 +35,10 @@ margin-bottom:10px;
 
 header p{
 font-size:17px;
-opacity:.9;
 }
 
 .container{
-max-width:1000px;
+max-width:1050px;
 margin:auto;
 padding:25px 15px;
 }
@@ -62,24 +60,25 @@ gap:18px;
 
 .card{
 background:white;
-padding:25px;
+padding:24px;
 border-radius:18px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+box-shadow:0 5px 18px rgba(0,0,0,.08);
 text-align:center;
 }
 
 .icon{
-font-size:45px;
+font-size:42px;
 margin-bottom:12px;
 }
 
 .card h2{
-margin-bottom:10px;
+margin-bottom:9px;
+font-size:21px;
 }
 
 .card p{
-color:#6b7280;
-margin-bottom:18px;
+color:#667085;
+margin-bottom:17px;
 }
 
 button{
@@ -102,18 +101,18 @@ background:white;
 padding:25px;
 margin-top:25px;
 border-radius:18px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+box-shadow:0 5px 18px rgba(0,0,0,.08);
 }
 
 .tool h2{
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 input,select{
 width:100%;
 padding:13px;
-margin:7px 0;
-border:1px solid #ddd;
+margin:6px 0;
+border:1px solid #d0d5dd;
 border-radius:10px;
 font-size:16px;
 }
@@ -121,28 +120,29 @@ font-size:16px;
 .result{
 margin-top:15px;
 padding:15px;
-background:#f3f4f6;
+background:#f2f4f7;
 border-radius:10px;
 font-weight:bold;
 }
 
-footer{
-text-align:center;
-padding:35px;
-color:#6b7280;
+.close{
+background:#667085;
+margin-top:15px;
 }
 
+footer{
+text-align:center;
+padding:35px 15px;
+color:#667085;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-
 <h1>🛠️ Herramientas Útiles</h1>
-
 <p>Herramientas gratuitas para tu día a día</p>
-
 </header>
 
 <div class="container">
@@ -150,66 +150,81 @@ color:#6b7280;
 <input
 class="search"
 id="search"
+type="text"
 placeholder="🔎 Buscar una herramienta..."
 onkeyup="buscar()"
 >
 
-<div class="tools" id="cards">
+<div class="tools">
 
 <div class="card">
-
 <div class="icon">🧮</div>
-
 <h2>Calculadora</h2>
-
-<p>Haz operaciones matemáticas rápidamente.</p>
-
-<button onclick="mostrar('calc')">
-Abrir
-</button>
-
+<p>Realiza operaciones matemáticas.</p>
+<button onclick="mostrar('calculadora')">Abrir</button>
 </div>
 
 <div class="card">
-
 <div class="icon">🎓</div>
-
 <h2>Promedio</h2>
-
-<p>Calcula tus notas fácilmente.</p>
-
-<button onclick="mostrar('promedio')">
-Abrir
-</button>
-
+<p>Calcula el promedio de tus notas.</p>
+<button onclick="mostrar('promedio')">Abrir</button>
 </div>
 
 <div class="card">
+<div class="icon">📊</div>
+<h2>Porcentajes</h2>
+<p>Calcula porcentajes fácilmente.</p>
+<button onclick="mostrar('porcentaje')">Abrir</button>
+</div>
 
+<div class="card">
+<div class="icon">💰</div>
+<h2>Descuentos</h2>
+<p>Calcula cuánto pagarás con descuento.</p>
+<button onclick="mostrar('descuento')">Abrir</button>
+</div>
+
+<div class="card">
 <div class="icon">📏</div>
-
 <h2>Conversor</h2>
-
-<p>Convierte metros, kilómetros y centímetros.</p>
-
-<button onclick="mostrar('convertidor')">
-Abrir
-</button>
-
+<p>Convierte unidades de longitud.</p>
+<button onclick="mostrar('conversor')">Abrir</button>
 </div>
 
 <div class="card">
+<div class="icon">🌡️</div>
+<h2>Temperatura</h2>
+<p>Convierte Celsius, Fahrenheit y Kelvin.</p>
+<button onclick="mostrar('temperatura')">Abrir</button>
+</div>
 
+<div class="card">
+<div class="icon">⚖️</div>
+<h2>Peso</h2>
+<p>Convierte kilogramos y gramos.</p>
+<button onclick="mostrar('peso')">Abrir</button>
+</div>
+
+<div class="card">
 <div class="icon">⏱️</div>
-
 <h2>Temporizador</h2>
-
 <p>Controla el tiempo de tus actividades.</p>
+<button onclick="mostrar('temporizador')">Abrir</button>
+</div>
 
-<button onclick="mostrar('timer')">
-Abrir
-</button>
+<div class="card">
+<div class="icon">🎂</div>
+<h2>Calculadora de edad</h2>
+<p>Calcula tu edad rápidamente.</p>
+<button onclick="mostrar('edad')">Abrir</button>
+</div>
 
+<div class="card">
+<div class="icon">🔢</div>
+<h2>Regla de tres</h2>
+<p>Resuelve reglas de tres simples.</p>
+<button onclick="mostrar('regla')">Abrir</button>
 </div>
 
 </div>
@@ -217,29 +232,26 @@ Abrir
 
 <!-- CALCULADORA -->
 
-<div class="tool" id="calc">
+<div class="tool" id="calculadora">
 
 <h2>🧮 Calculadora</h2>
 
-<input id="numero1" type="number" placeholder="Primer número">
+<input id="num1" type="number" placeholder="Primer número">
 
-<input id="numero2" type="number" placeholder="Segundo número">
+<input id="num2" type="number" placeholder="Segundo número">
 
 <select id="operacion">
-
-<option value="+">Suma +</option>
-
-<option value="-">Resta −</option>
-
-<option value="*">Multiplicación ×</option>
-
-<option value="/">División ÷</option>
-
+<option value="+">Suma (+)</option>
+<option value="-">Resta (-)</option>
+<option value="*">Multiplicación (×)</option>
+<option value="/">División (÷)</option>
 </select>
 
 <button onclick="calcular()">Calcular</button>
 
-<div class="result" id="resultadoCalc"></div>
+<div class="result" id="resultadoCalculadora"></div>
+
+<button class="close" onclick="cerrar()">Cerrar</button>
 
 </div>
 
@@ -248,59 +260,190 @@ Abrir
 
 <div class="tool" id="promedio">
 
-<h2>🎓 Calculadora de Promedio</h2>
+<h2>🎓 Calculadora de promedio</h2>
 
-<input id="nota1" type="number" step="0.01" placeholder="Nota 1">
+<input id="n1" type="number" step="0.01" placeholder="Nota 1">
 
-<input id="nota2" type="number" step="0.01" placeholder="Nota 2">
+<input id="n2" type="number" step="0.01" placeholder="Nota 2">
 
-<input id="nota3" type="number" step="0.01" placeholder="Nota 3">
+<input id="n3" type="number" step="0.01" placeholder="Nota 3">
 
-<button onclick="promediar()">Calcular promedio</button>
+<button onclick="promediar()">Calcular</button>
 
 <div class="result" id="resultadoPromedio"></div>
+
+<button class="close" onclick="cerrar()">Cerrar</button>
+
+</div>
+
+
+<!-- PORCENTAJE -->
+
+<div class="tool" id="porcentaje">
+
+<h2>📊 Calculadora de porcentaje</h2>
+
+<input id="cantidadPorcentaje" type="number" placeholder="Cantidad">
+
+<input id="porcentajeValor" type="number" placeholder="Porcentaje (%)">
+
+<button onclick="calcularPorcentaje()">Calcular</button>
+
+<div class="result" id="resultadoPorcentaje"></div>
+
+<button class="close" onclick="cerrar()">Cerrar</button>
+
+</div>
+
+
+<!-- DESCUENTO -->
+
+<div class="tool" id="descuento">
+
+<h2>💰 Calculadora de descuento</h2>
+
+<input id="precio" type="number" placeholder="Precio">
+
+<input id="descuentoValor" type="number" placeholder="Descuento (%)">
+
+<button onclick="calcularDescuento()">Calcular</button>
+
+<div class="result" id="resultadoDescuento"></div>
+
+<button class="close" onclick="cerrar()">Cerrar</button>
 
 </div>
 
 
 <!-- CONVERSOR -->
 
-<div class="tool" id="convertidor">
+<div class="tool" id="conversor">
 
 <h2>📏 Conversor de longitud</h2>
 
-<input id="cantidad" type="number" placeholder="Cantidad">
+<input id="longitud" type="number" placeholder="Cantidad">
 
-<select id="conversion">
+<select id="tipoLongitud">
 
-<option value="mkm">Metros → Kilómetros</option>
-
-<option value="kmm">Kilómetros → Metros</option>
-
-<option value="mcm">Metros → Centímetros</option>
-
-<option value="cmm">Centímetros → Metros</option>
+<option value="mk">Metros → Kilómetros</option>
+<option value="km">Kilómetros → Metros</option>
+<option value="mc">Metros → Centímetros</option>
+<option value="cm">Centímetros → Metros</option>
 
 </select>
 
-<button onclick="convertir()">Convertir</button>
+<button onclick="convertirLongitud()">Convertir</button>
 
-<div class="result" id="resultadoConversion"></div>
+<div class="result" id="resultadoLongitud"></div>
+
+<button class="close" onclick="cerrar()">Cerrar</button>
+
+</div>
+
+
+<!-- TEMPERATURA -->
+
+<div class="tool" id="temperatura">
+
+<h2>🌡️ Conversor de temperatura</h2>
+
+<input id="temp" type="number" placeholder="Temperatura">
+
+<select id="tipoTemp">
+
+<option value="cf">Celsius → Fahrenheit</option>
+<option value="fc">Fahrenheit → Celsius</option>
+<option value="ck">Celsius → Kelvin</option>
+<option value="kc">Kelvin → Celsius</option>
+
+</select>
+
+<button onclick="convertirTemperatura()">Convertir</button>
+
+<div class="result" id="resultadoTemp"></div>
+
+<button class="close" onclick="cerrar()">Cerrar</button>
+
+</div>
+
+
+<!-- PESO -->
+
+<div class="tool" id="peso">
+
+<h2>⚖️ Conversor de peso</h2>
+
+<input id="pesoValor" type="number" placeholder="Cantidad">
+
+<select id="tipoPeso">
+
+<option value="kg">Kilogramos → Gramos</option>
+<option value="g">Gramos → Kilogramos</option>
+
+</select>
+
+<button onclick="convertirPeso()">Convertir</button>
+
+<div class="result" id="resultadoPeso"></div>
+
+<button class="close" onclick="cerrar()">Cerrar</button>
 
 </div>
 
 
 <!-- TEMPORIZADOR -->
 
-<div class="tool" id="timer">
+<div class="tool" id="temporizador">
 
 <h2>⏱️ Temporizador</h2>
 
 <input id="segundos" type="number" placeholder="Segundos">
 
-<button onclick="iniciarTimer()">Iniciar</button>
+<button onclick="iniciarTemporizador()">Iniciar</button>
 
 <div class="result" id="reloj">00:00</div>
+
+<button class="close" onclick="cerrar()">Cerrar</button>
+
+</div>
+
+
+<!-- EDAD -->
+
+<div class="tool" id="edad">
+
+<h2>🎂 Calculadora de edad</h2>
+
+<input id="fechaNacimiento" type="date">
+
+<button onclick="calcularEdad()">Calcular edad</button>
+
+<div class="result" id="resultadoEdad"></div>
+
+<button class="close" onclick="cerrar()">Cerrar</button>
+
+</div>
+
+
+<!-- REGLA DE TRES -->
+
+<div class="tool" id="regla">
+
+<h2>🔢 Regla de tres</h2>
+
+<p>Si A corresponde a B, ¿cuánto corresponde a C?</p>
+
+<input id="a" type="number" placeholder="A">
+
+<input id="b" type="number" placeholder="B">
+
+<input id="c" type="number" placeholder="C">
+
+<button onclick="reglaTres()">Calcular</button>
+
+<div class="result" id="resultadoRegla"></div>
+
+<button class="close" onclick="cerrar()">Cerrar</button>
 
 </div>
 
@@ -309,19 +452,17 @@ Abrir
 <footer>
 
 <p>© 2026 Herramientas Útiles</p>
-
 <p>Herramientas gratuitas para todos.</p>
 
 </footer>
-
 
 <script>
 
 function mostrar(id){
 
-document.querySelectorAll(".tool").forEach(function(tool){
+document.querySelectorAll(".tool").forEach(function(t){
 
-tool.style.display="none";
+t.style.display="none";
 
 });
 
@@ -337,57 +478,81 @@ behavior:"smooth"
 
 }
 
+function cerrar(){
+
+document.querySelectorAll(".tool").forEach(function(t){
+
+t.style.display="none";
+
+});
+
+}
+
+function buscar(){
+
+let texto=document.getElementById("search").value.toLowerCase();
+
+document.querySelectorAll(".card").forEach(function(card){
+
+card.style.display=
+
+card.innerText.toLowerCase().includes(texto)
+
+?"block":"none";
+
+});
+
+}
 
 function calcular(){
 
-let a=parseFloat(document.getElementById("numero1").value);
+let a=parseFloat(document.getElementById("num1").value);
 
-let b=parseFloat(document.getElementById("numero2").value);
+let b=parseFloat(document.getElementById("num2").value);
 
 let op=document.getElementById("operacion").value;
 
 if(isNaN(a)||isNaN(b)){
 
-document.getElementById("resultadoCalc").innerText="Ingresa los dos números.";
+document.getElementById("resultadoCalculadora").innerText="Ingresa los dos números.";
 
 return;
 
 }
 
-let resultado;
+let r;
 
-if(op==="+") resultado=a+b;
+if(op==="+")r=a+b;
 
-if(op==="-") resultado=a-b;
+if(op==="-")r=a-b;
 
-if(op==="*") resultado=a*b;
+if(op==="*")r=a*b;
 
 if(op==="/"){
 
 if(b===0){
 
-document.getElementById("resultadoCalc").innerText="No se puede dividir entre cero.";
+document.getElementById("resultadoCalculadora").innerText="No se puede dividir entre cero.";
 
 return;
 
 }
 
-resultado=a/b;
+r=a/b;
 
 }
 
-document.getElementById("resultadoCalc").innerText="Resultado: "+resultado;
+document.getElementById("resultadoCalculadora").innerText="Resultado: "+r;
 
 }
-
 
 function promediar(){
 
-let a=parseFloat(document.getElementById("nota1").value);
+let a=parseFloat(document.getElementById("n1").value);
 
-let b=parseFloat(document.getElementById("nota2").value);
+let b=parseFloat(document.getElementById("n2").value);
 
-let c=parseFloat(document.getElementById("nota3").value);
+let c=parseFloat(document.getElementById("n3").value);
 
 if(isNaN(a)||isNaN(b)||isNaN(c)){
 
@@ -397,71 +562,149 @@ return;
 
 }
 
-let promedio=(a+b+c)/3;
+let r=(a+b+c)/3;
 
-document.getElementById("resultadoPromedio").innerText="Tu promedio es: "+promedio.toFixed(2);
+document.getElementById("resultadoPromedio").innerText="Promedio: "+r.toFixed(2);
 
 }
 
+function calcularPorcentaje(){
 
-function convertir(){
+let cantidad=parseFloat(document.getElementById("cantidadPorcentaje").value);
 
-let cantidad=parseFloat(document.getElementById("cantidad").value);
+let porcentaje=parseFloat(document.getElementById("porcentajeValor").value);
 
-let tipo=document.getElementById("conversion").value;
+if(isNaN(cantidad)||isNaN(porcentaje)){
 
-if(isNaN(cantidad)){
-
-document.getElementById("resultadoConversion").innerText="Ingresa una cantidad.";
+document.getElementById("resultadoPorcentaje").innerText="Completa los datos.";
 
 return;
 
 }
 
-let resultado;
+let r=cantidad*porcentaje/100;
+
+document.getElementById("resultadoPorcentaje").innerText=
+
+porcentaje+"% de "+cantidad+" = "+r;
+
+}
+
+function calcularDescuento(){
+
+let precio=parseFloat(document.getElementById("precio").value);
+
+let descuento=parseFloat(document.getElementById("descuentoValor").value);
+
+if(isNaN(precio)||isNaN(descuento)){
+
+document.getElementById("resultadoDescuento").innerText="Completa los datos.";
+
+return;
+
+}
+
+let ahorro=precio*descuento/100;
+
+let final=precio-ahorro;
+
+document.getElementById("resultadoDescuento").innerText=
+
+"Ahorro: $"+ahorro.toFixed(2)+" | Precio final: $"+final.toFixed(2);
+
+}
+
+function convertirLongitud(){
+
+let x=parseFloat(document.getElementById("longitud").value);
+
+let tipo=document.getElementById("tipoLongitud").value;
+
+if(isNaN(x)){
+
+document.getElementById("resultadoLongitud").innerText="Ingresa una cantidad.";
+
+return;
+
+}
+
+let r;
+
+if(tipo==="mk")r=x/1000;
+
+if(tipo==="km")r=x*1000;
+
+if(tipo==="mc")r=x*100;
+
+if(tipo==="cm")r=x/100;
+
+document.getElementById("resultadoLongitud").innerText="Resultado: "+r;
+
+}
+
+function convertirTemperatura(){
+
+let x=parseFloat(document.getElementById("temp").value);
+
+let tipo=document.getElementById("tipoTemp").value;
+
+if(isNaN(x)){
+
+document.getElementById("resultadoTemp").innerText="Ingresa una temperatura.";
+
+return;
+
+}
+
+let r;
 
 let unidad;
 
-if(tipo==="mkm"){
+if(tipo==="cf"){r=(x*9/5)+32;unidad=" °F";}
 
-resultado=cantidad/1000;
+if(tipo==="fc"){r=(x-32)*5/9;unidad=" °C";}
 
-unidad=" km";
+if(tipo==="ck"){r=x+273.15;unidad=" K";}
 
-}
+if(tipo==="kc"){r=x-273.15;unidad=" °C";}
 
-if(tipo==="kmm"){
+document.getElementById("resultadoTemp").innerText=
 
-resultado=cantidad*1000;
-
-unidad=" m";
+"Resultado: "+r.toFixed(2)+unidad;
 
 }
 
-if(tipo==="mcm"){
+function convertirPeso(){
 
-resultado=cantidad*100;
+let x=parseFloat(document.getElementById("pesoValor").value);
 
-unidad=" cm";
+let tipo=document.getElementById("tipoPeso").value;
 
-}
+if(isNaN(x)){
 
-if(tipo==="cmm"){
+document.getElementById("resultadoPeso").innerText="Ingresa una cantidad.";
 
-resultado=cantidad/100;
-
-unidad=" m";
+return;
 
 }
 
-document.getElementById("resultadoConversion").innerText="Resultado: "+resultado+unidad;
+let r;
+
+let unidad;
+
+if(tipo==="kg"){r=x*1000;unidad=" g";}
+
+if(tipo==="g"){r=x/1000;unidad=" kg";}
+
+document.getElementById("resultadoPeso").innerText=
+
+"Resultado: "+r+unidad;
 
 }
-
 
 let intervalo;
 
-function iniciarTimer(){
+function iniciarTemporizador(){
 
 clearInterval(intervalo);
 
@@ -477,13 +720,13 @@ return;
 
 intervalo=setInterval(function(){
 
-let minutos=Math.floor(tiempo/60);
+let min=Math.floor(tiempo/60);
 
-let segundosRestantes=tiempo%60;
+let seg=tiempo%60;
 
 document.getElementById("reloj").innerText=
 
-String(minutos).padStart(2,"0")+":"+String(segundosRestantes).padStart(2,"0");
+String(min).padStart(2,"0")+":"+String(seg).padStart(2,"0");
 
 tiempo--;
 
@@ -499,28 +742,61 @@ document.getElementById("reloj").innerText="⏰ ¡Tiempo terminado!";
 
 }
 
+function calcularEdad(){
 
-function buscar(){
+let fecha=document.getElementById("fechaNacimiento").value;
 
-let texto=document.getElementById("search").value.toLowerCase();
+if(!fecha){
 
-document.querySelectorAll(".card").forEach(function(card){
+document.getElementById("resultadoEdad").innerText="Selecciona tu fecha de nacimiento.";
 
-if(card.innerText.toLowerCase().includes(texto)){
-
-card.style.display="block";
-
-}else{
-
-card.style.display="none";
+return;
 
 }
 
-});
+let nacimiento=new Date(fecha);
+
+let hoy=new Date();
+
+let edad=hoy.getFullYear()-nacimiento.getFullYear();
+
+let mes=hoy.getMonth()-nacimiento.getMonth();
+
+if(mes<0||(mes===0&&hoy.getDate()<nacimiento.getDate())){
+
+edad--;
+
+}
+
+document.getElementById("resultadoEdad").innerText=
+
+"Tienes "+edad+" años.";
+
+}
+
+function reglaTres(){
+
+let a=parseFloat(document.getElementById("a").value);
+
+let b=parseFloat(document.getElementById("b").value);
+
+let c=parseFloat(document.getElementById("c").value);
+
+if(isNaN(a)||isNaN(b)||isNaN(c)||a===0){
+
+document.getElementById("resultadoRegla").innerText="Completa correctamente los datos.";
+
+return;
+
+}
+
+let x=(b*c)/a;
+
+document.getElementById("resultadoRegla").innerText="Resultado: "+x;
 
 }
 
 </script>
 
 </body>
-</html>
+  </html>
