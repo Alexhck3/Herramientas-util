@@ -477,7 +477,181 @@ onkeyup="buscar()"
 </div>
 
 </div>
+<section id="guias" style="margin-top:40px;">
 
+<h2 style="margin-bottom:20px;">
+📚 Guías útiles
+</h2>
+
+<div class="tools">
+
+<div class="card">
+<div class="icon">📊</div>
+<h2>¿Cómo calcular un porcentaje?</h2>
+<p>Aprende una forma sencilla de calcular porcentajes.</p>
+<button onclick="mostrarGuia('guiaPorcentaje')">
+Leer guía
+</button>
+</div>
+
+<div class="card">
+<div class="icon">🎓</div>
+<h2>¿Cómo calcular un promedio?</h2>
+<p>Aprende a calcular el promedio de varias notas.</p>
+<button onclick="mostrarGuia('guiaPromedio')">
+Leer guía
+</button>
+</div>
+
+<div class="card">
+<div class="icon">💰</div>
+<h2>¿Cómo calcular un descuento?</h2>
+<p>Descubre cuánto ahorrarás en una compra.</p>
+<button onclick="mostrarGuia('guiaDescuento')">
+Leer guía
+</button>
+</div>
+
+<div class="card">
+<div class="icon">🔢</div>
+<h2>¿Cómo hacer una regla de tres?</h2>
+<p>Aprende este cálculo paso a paso.</p>
+<button onclick="mostrarGuia('guiaRegla')">
+Leer guía
+</button>
+</div>
+
+</div>
+
+
+<div class="tool" id="guiaPorcentaje">
+
+<h2>📊 Cómo calcular un porcentaje</h2>
+
+<p style="line-height:1.7;">
+
+Para calcular un porcentaje, multiplica la cantidad por el porcentaje y divide el resultado entre 100.
+
+<br><br>
+
+<strong>Ejemplo:</strong>
+
+<br><br>
+
+¿Cuánto es el 20% de 500?
+
+<br><br>
+
+500 × 20 ÷ 100 = <strong>100</strong>
+
+<br><br>
+
+Por lo tanto, el 20% de 500 es 100.
+
+</p>
+
+</div>
+
+
+<div class="tool" id="guiaPromedio">
+
+<h2>🎓 Cómo calcular un promedio</h2>
+
+<p style="line-height:1.7;">
+
+Para calcular un promedio, suma todos los valores y divide el resultado entre la cantidad de valores.
+
+<br><br>
+
+<strong>Ejemplo:</strong>
+
+<br><br>
+
+Notas: 8, 9 y 10.
+
+<br><br>
+
+8 + 9 + 10 = 27
+
+<br><br>
+
+27 ÷ 3 = <strong>9</strong>
+
+<br><br>
+
+El promedio es 9.
+
+</p>
+
+</div>
+
+
+<div class="tool" id="guiaDescuento">
+
+<h2>💰 Cómo calcular un descuento</h2>
+
+<p style="line-height:1.7;">
+
+Primero calcula cuánto representa el porcentaje de descuento y después réstalo al precio original.
+
+<br><br>
+
+<strong>Ejemplo:</strong>
+
+<br><br>
+
+Producto: $50
+
+<br>
+
+Descuento: 20%
+
+<br><br>
+
+50 × 20 ÷ 100 = $10
+
+<br><br>
+
+50 − 10 = <strong>$40</strong>
+
+<br><br>
+
+El precio final sería $40.
+
+</p>
+
+</div>
+
+
+<div class="tool" id="guiaRegla">
+
+<h2>🔢 Cómo hacer una regla de tres</h2>
+
+<p style="line-height:1.7;">
+
+La regla de tres sirve para encontrar un valor desconocido cuando conocemos tres valores relacionados.
+
+<br><br>
+
+<strong>Ejemplo:</strong>
+
+<br><br>
+
+Si 2 productos cuestan $10, ¿cuánto cuestan 5 productos?
+
+<br><br>
+
+(10 × 5) ÷ 2 = <strong>$25</strong>
+
+<br><br>
+
+Por lo tanto, 5 productos cuestan $25.
+
+</p>
+
+</div>
+
+</section>
 <footer>
 
 <p>© 2026 Herramientas Útiles</p>
@@ -486,7 +660,20 @@ onkeyup="buscar()"
 </footer>
 
 <script>
+function mostrarGuia(id){
 
+document.querySelectorAll(".tool").forEach(function(t){
+    t.style.display="none";
+});
+
+document.getElementById(id).style.display="block";
+
+window.scrollTo({
+    top:document.getElementById(id).offsetTop-20,
+    behavior:"smooth"
+});
+
+  }
 function mostrar(id){
 
 document.querySelectorAll(".tool").forEach(function(t){
