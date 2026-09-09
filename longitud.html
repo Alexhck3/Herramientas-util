@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Conversor de Longitud | Herramientas Útiles</title>
+
+<meta name="description" content="Conversor de longitud gratis. Convierte metros, kilómetros, centímetros, milímetros, pulgadas y pies fácilmente.">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#f4f6f8;
+color:#17202a;
+line-height:1.6;
+}
+
+header{
+background:linear-gradient(135deg,#111827,#2563eb);
+color:white;
+text-align:center;
+padding:35px 15px;
+}
+
+header h1{
+margin-bottom:8px;
+}
+
+.container{
+max-width:750px;
+margin:30px auto;
+padding:0 15px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+margin-bottom:25px;
+}
+
+h2{
+margin-bottom:15px;
+}
+
+p{
+margin-bottom:15px;
+color:#555;
+}
+
+label{
+display:block;
+font-weight:bold;
+margin-top:15px;
+margin-bottom:6px;
+}
+
+input,
+select{
+width:100%;
+padding:13px;
+border:1px solid #d0d5dd;
+border-radius:10px;
+font-size:16px;
+}
+
+button{
+margin-top:18px;
+background:#2563eb;
+color:white;
+border:0;
+padding:13px 20px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+.resultado{
+margin-top:20px;
+padding:15px;
+background:#eef4ff;
+border-radius:10px;
+font-size:18px;
+line-height:1.8;
+}
+
+.volver{
+display:inline-block;
+margin-top:10px;
+color:#2563eb;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>📏 Conversor de Longitud</h1>
+
+<p>Convierte medidas de longitud de forma rápida y fácil</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>🧮 Convertir longitud</h2>
+
+<label>Valor</label>
+
+<input
+type="number"
+id="valor"
+placeholder="Ejemplo: 1"
+step="any"
+>
+
+<label>Convertir desde</label>
+
+<select id="desde">
+
+<option value="m">Metros (m)</option>
+<option value="km">Kilómetros (km)</option>
+<option value="cm">Centímetros (cm)</option>
+<option value="mm">Milímetros (mm)</option>
+<option value="in">Pulgadas (in)</option>
+<option value="ft">Pies (ft)</option>
+
+</select>
+
+<label>Convertir a</label>
+
+<select id="a">
+
+<option value="m">Metros (m)</option>
+<option value="km">Kilómetros (km)</option>
+<option value="cm">Centímetros (cm)</option>
+<option value="mm">Milímetros (mm)</option>
+<option value="in">Pulgadas (in)</option>
+<option value="ft">Pies (ft)</option>
+
+</select>
+
+<button onclick="convertirLongitud()">
+Convertir
+</button>
+
+<div id="resultado" class="resultado" style="display:none;"></div>
+
+</div>
+
+<div class="card">
+
+<h2>📚 ¿Cómo funciona?</h2>
+
+<p>
+El conversor transforma una medida de una unidad de longitud a otra.
+</p>
+
+<p>
+Por ejemplo, si tienes <strong>1 metro</strong> y quieres convertirlo a centímetros:
+</p>
+
+<p>
+<strong>1 metro = 100 centímetros</strong>
+</p>
+
+<p>
+También puedes convertir kilómetros, mil
