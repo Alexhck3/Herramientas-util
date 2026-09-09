@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Temporizador Online | Herramientas Útiles</title>
+
+<meta name="description" content="Temporizador online gratis. Configura minutos y segundos fácilmente desde tu celular o computadora.">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#f4f6f8;
+color:#17202a;
+line-height:1.6;
+}
+
+header{
+background:linear-gradient(135deg,#111827,#2563eb);
+color:white;
+text-align:center;
+padding:35px 15px;
+}
+
+header h1{
+margin-bottom:8px;
+}
+
+.container{
+max-width:750px;
+margin:30px auto;
+padding:0 15px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+margin-bottom:25px;
+text-align:center;
+}
+
+h2{
+margin-bottom:15px;
+}
+
+p{
+margin-bottom:15px;
+color:#555;
+}
+
+label{
+display:block;
+font-weight:bold;
+margin-top:15px;
+margin-bottom:6px;
+text-align:left;
+}
+
+input{
+width:100%;
+padding:13px;
+border:1px solid #d0d5dd;
+border-radius:10px;
+font-size:16px;
+}
+
+button{
+margin:8px 4px 0;
+background:#2563eb;
+color:white;
+border:0;
+padding:13px 20px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+.btn-detener{
+background:#dc2626;
+}
+
+.btn-detener:hover{
+background:#b91c1c;
+}
+
+.btn-reiniciar{
+background:#4b5563;
+}
+
+.btn-reiniciar:hover{
+background:#374151;
+}
+
+.reloj{
+font-size:60px;
+font-weight:bold;
+margin:25px 0;
+color:#111827;
+}
+
+.resultado{
+margin-top:20px;
+padding:15px;
+background:#eef4ff;
+border-radius:10px;
+font-size:18px;
+}
+
+.volver{
+display:inline-block;
+margin-top:10px;
+color:#
