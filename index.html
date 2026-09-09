@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas Útiles</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #d1d5db;
+        }
+
+        .contenedor {
+            max-width: 1000px;
+            margin: auto;
+            padding: 25px 15px;
+        }
+
+        .buscador {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        .herramientas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .tarjeta {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .tarjeta .icono {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .tarjeta h2 {
+            margin-bottom: 10px;
+        }
+
+        .tarjeta p {
+            color: #666;
+            margin-bottom: 18px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🛠️ Herramientas Útiles</h1>
+    <p>Herramientas rápidas, fáciles y gratuitas</p>
+</header>
+
+<div class="contenedor">
+
+    <input
+        class="buscador"
+        type="text"
+        placeholder="🔎 Buscar una herramienta..."
+        onkeyup="buscarHerramienta()"
+        id="buscador"
+    >
+
+    <div class="herramientas" id="herramientas">
+
+        <div class="tarjeta">
+            <div class="icono">🧮</div>
+            <h2>Calculadora</h2>
+            <p>Realiza cálculos rápidamente.</p>
+            <button onclick="alert('Próximamente tendremos una calculadora completa')">
+                Abrir
+            </button>
+        </div>
+
+        <div class="tarjeta">
+            <div class="icono">📏</div>
+            <h2>Conversor</h2>
+            <p>Convierte diferentes unidades.</p>
+            <button onclick="alert('Próximamente tendremos un conversor')">
+                Abrir
+            </button>
+        </div>
+
+        <div class="tarjeta">
+            <div class="icono">💱</div>
+            <h2>Monedas</h2>
+            <p>Consulta conversiones de monedas.</p>
+            <button onclick="alert('Próximamente tendremos un conversor de monedas')">
+                Abrir
+            </button>
+        </div>
+
+        <div class="tarjeta">
+            <div class="icono">⏱️</div>
+            <h2>Temporizador</h2>
+            <p>Controla tu tiempo fácilmente.</p>
+            <button onclick="alert('Próximamente tendremos un temporizador')">
+                Abrir
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 Herramientas Útiles
+</footer>
+
+<script>
+function buscarHerramienta() {
+    let texto = document.getElementById("buscador").value.toLowerCase();
+    let tarjetas = document.querySelectorAll(".tarjeta");
+
+    tarjetas.forEach(function(tarjeta) {
+        let contenido = tarjeta.innerText.toLowerCase();
+
+        if (contenido.includes(texto)) {
+            tarjeta.style.display = "block";
+        } else {
+            tarjeta.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+              </html>
