@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alexhck3.github.io/Herramientas-util/sitemap.xml
