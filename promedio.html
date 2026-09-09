@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora de Promedio de Notas | Herramientas Útiles</title>
+
+<meta name="description" content="Calculadora de promedio de notas gratis. Calcula fácilmente el promedio de tus calificaciones.">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#f4f6f8;
+color:#17202a;
+line-height:1.6;
+}
+
+header{
+background:linear-gradient(135deg,#111827,#2563eb);
+color:white;
+text-align:center;
+padding:35px 15px;
+}
+
+header h1{
+margin-bottom:8px;
+}
+
+.container{
+max-width:750px;
+margin:30px auto;
+padding:0 15px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+margin-bottom:25px;
+}
+
+h2{
+margin-bottom:15px;
+}
+
+p{
+margin-bottom:15px;
+color:#555;
+}
+
+input{
+width:100%;
+padding:13px;
+border:1px solid #d0d5dd;
+border-radius:10px;
+font-size:16px;
+margin-top:8px;
+margin-bottom:15px;
+}
+
+button{
+margin-top:5px;
+background:#2563eb;
+color:white;
+border:0;
+padding:13px 20px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+.resultado{
+margin-top:20px;
+padding:15px;
+background:#eef4ff;
+border-radius:10px;
+font-weight:bold;
+font-size:18px;
+}
+
+.volver{
+display:inline-block;
+margin-top:10px;
+color:#2563eb;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🎓 Calculadora de Promedio de Notas</h1>
+
+<p>Calcula el promedio de tus calificaciones fácilmente</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>📊 Calcula tu promedio</h2>
+
+<p>
+Escribe tus notas separadas por comas.
+</p>
+
+<input
+type="text"
+id="notas"
+placeholder="Ejemplo: 8, 9, 7, 10"
+>
+
+<button onclick="calcularPromedio()">
+Calcular promedio
+</button>
+
+<div id="resultado" class="resultado" style="display:none;"></div>
+
+</div>
+
+<div class="card">
+
+<h2>📚 ¿Cómo se calcula el promedio?</h2>
+
+<p>
+Para calcular un promedio se suman todas las notas y después se divide el resultado entre la cantidad de notas.
+</p>
+
+<p>
+<strong>Promedio = suma de las notas ÷ cantidad de notas</strong
